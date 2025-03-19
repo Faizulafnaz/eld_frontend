@@ -4,7 +4,7 @@ import axios from "axios";
 import AuthContext from '../context/AuthContext'
 import { Nav } from "../components/Nav";
 
-const API_URL = "http://127.0.0.1:8000/api/view-log"; // Django API
+const API_URL =  `${import.meta.env.VITE_API_URL}/view-log`
 
 const EldLogPDF = () => {
   const { logId } = useParams();

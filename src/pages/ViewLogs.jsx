@@ -6,7 +6,7 @@ import AuthContext from "../context/AuthContext";
 import Loading from "../components/Loading";
 
 
-const API_URL = "http://127.0.0.1:8000/api/eld-logs/";
+const API_URL = `${import.meta.env.VITE_API_URL}/eld-logs/`
 
 const ViewLogs = () => {
   const { token } = useContext(AuthContext); // Get token from context

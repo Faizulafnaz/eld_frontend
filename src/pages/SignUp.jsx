@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/truck-red-converted-bdbe7b1994e04d9723fe6301a0608409f3f3a40cc45c821455354c3ec2cf4425.webp";
 import Loading from "../components/Loading";
 
-const API_URL = "http://127.0.0.1:8000/api/register/";
+const API_URL =  `${import.meta.env.VITE_API_URL}/register/`
 
 const SignUp = () => {
   const navigate = useNavigate();

@@ -6,7 +6,7 @@ import axios from "axios";
 import AuthContext from '../context/AuthContext'
 import { toast, ToastContainer } from "react-toastify";
 
-const API_URL = "http://127.0.0.1:8000/api/eld-logs/";
+const API_URL = `${import.meta.env.VITE_API_URL}/eld-logs/`
 
 const EldLogForm = () => {
   const navigate = useNavigate();
