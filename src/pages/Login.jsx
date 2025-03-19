@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import AuthContext from '../context/AuthContext'
 import { useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import logo from "../assets/truck-red-converted-bdbe7b1994e04d9723fe6301a0608409f3f3a40cc45c821455354c3ec2cf4425.webp";
 
 export const Login = () => {
 
@@ -16,7 +17,7 @@ export const Login = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             alt="Your Company"
-            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+            src={logo}
             className="mx-auto h-10 w-auto"
           />
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
