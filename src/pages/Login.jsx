@@ -3,12 +3,16 @@ import AuthContext from '../context/AuthContext'
 import { useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import logo from "../assets/truck-red-converted-bdbe7b1994e04d9723fe6301a0608409f3f3a40cc45c821455354c3ec2cf4425.webp";
+import Loading from '../components/Loading';
+import { Spinner } from "flowbite-react";
+
 
 export const Login = () => {
 
-    const {login, user} = useContext(AuthContext)
+    const {login, user, loading} = useContext(AuthContext)
     const navigate = useNavigate();
     if (user) return navigate('/')
+
 
   return (
     <div>
@@ -66,7 +70,7 @@ export const Login = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                {loading ? <Spinner aria-label="Default status example" /> : 'Sign in'}
               </button>
             </div>
           </form>

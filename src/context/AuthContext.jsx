@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (e) => {
     e.preventDefault(); 
+    setLoading(true)
     try {
       const response = await axios.post(`${API_BASE_URL}/login/`, {
         username: e.target.username.value,
@@ -42,9 +43,11 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("access", response.data.access);
       setToken(response.data.access);
       setUser(response.data.user);
+      setLoading(false)
   
       navigate("/");
     } catch (error) {
+      setLoading(false)
       if (error.response) {
         if (error.response.status === 400) {
           toast.error("Invalid username or password. Please try again.", { position: "top-right" });
@@ -60,6 +63,7 @@ export const AuthProvider = ({ children }) => {
       } else {
         toast.error("An unknown error occurred. Please try again.",  { position: "top-right" });
       }
+      
     }
   };
   
