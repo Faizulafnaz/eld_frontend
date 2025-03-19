@@ -5,7 +5,7 @@ import ProtectedLayout from './components/ProtectedLayout';
 import RoutePreview from "./pages/RoutePreview";
 import EldLogForm from "./pages/EldLogForm";
 import EldLogPDF from "./pages/EldLogPdf";
-import ViewLogs from "./pages/viewLogs";
+import ViewLogs from "./pages/ViewLogs";
 import SignUp from "./pages/SignUp";
 
 
